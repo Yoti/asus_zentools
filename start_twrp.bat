@@ -1,4 +1,4 @@
-rem fast reload into twrp recovery by Yoti v2016-04-04	
+rem fast reload into twrp recovery by Yoti v2016-04-05
 @echo off
 
 if not exist "adb.exe" (
@@ -13,7 +13,7 @@ if not exist "fastboot.exe" (
 )
 
 adb kill-server
-adb start-server 2>nul 1>&2
+adb start-server >nul
 adb devices > adb.tmp
 echo Will try to find device in ADB mode...
 for %%F in (adb.tmp) do (
