@@ -17,8 +17,8 @@ adb -d push files/flash-ifwi /data/local/tmp/flash-ifwi
 adb -d push files/if-locked.bin /data/local/tmp/if-locked.bin
 adb -d shell su -c 'chmod 777 /data/local/tmp/flash-ifwi'
 adb -d shell su -c '/data/local/tmp/flash-ifwi --flash-ifwi /data/local/tmp/if-locked.bin'
-adb -d delete /data/local/tmp/flash-ifwi
-adb -d delete /data/local/tmp/if-locked.bin
+adb -d shell rm -f /data/local/tmp/flash-ifwi
+adb -d shell rm -f /data/local/tmp/if-unlocked.bin
 
 adb kill-server
 echo Done with success!
