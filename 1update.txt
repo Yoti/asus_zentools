@@ -1,0 +1,3 @@
+adb sideload update.zip
+
+fastboot update update.zip

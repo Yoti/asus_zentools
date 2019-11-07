@@ -1,0 +1,20 @@
+adb shell
+	su
+	wipe
+
+adb shell
+	wipe data
+
+adb shell
+	recovery --wipe_cache
+	recovery --wipe_data
+
+fastboot -w
+
+fastboot erase cache
+fastboot erase data
+fastboot erase userdata
+
+fastboot format cache
+fastboot format data
+fastboot format userdata
